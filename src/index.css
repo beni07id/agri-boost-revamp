@@ -2,62 +2,69 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Agribiz Design System - Corporate Agricultural Intelligence Platform */
+/* Agribiz Design System - Premium Corporate Agricultural Intelligence Platform */
 
 @layer base {
   :root {
     --background: 0 0% 100%;
-    --foreground: 210 15% 15%;
+    --foreground: 210 20% 8%;
 
     --card: 0 0% 100%;
-    --card-foreground: 210 15% 15%;
+    --card-foreground: 210 20% 8%;
 
     --popover: 0 0% 100%;
-    --popover-foreground: 210 15% 15%;
+    --popover-foreground: 210 20% 8%;
 
-    --primary: 200 88% 39%;
+    --primary: 207 90% 35%;
     --primary-foreground: 0 0% 100%;
-    --primary-light: 200 88% 50%;
-    --primary-dark: 200 88% 30%;
+    --primary-light: 207 90% 45%;
+    --primary-dark: 207 90% 25%;
 
-    --secondary: 210 20% 96%;
-    --secondary-foreground: 210 15% 15%;
+    --secondary: 210 25% 97%;
+    --secondary-foreground: 210 20% 8%;
 
-    --muted: 210 20% 96%;
-    --muted-foreground: 210 15% 60%;
+    --muted: 210 25% 97%;
+    --muted-foreground: 210 15% 55%;
 
-    --accent: 190 100% 95%;
-    --accent-foreground: 200 88% 39%;
+    --accent: 188 100% 96%;
+    --accent-foreground: 207 90% 35%;
 
     --destructive: 0 84% 60%;
     --destructive-foreground: 0 0% 100%;
 
-    --border: 210 20% 90%;
-    --input: 210 20% 96%;
-    --ring: 200 88% 39%;
+    --border: 210 20% 89%;
+    --input: 210 25% 97%;
+    --ring: 207 90% 35%;
 
-    --radius: 0.75rem;
+    --radius: 0.875rem;
 
-    /* Agribiz Brand Colors */
-    --agribiz-blue: 200 88% 39%;
-    --agribiz-blue-light: 200 88% 50%;
-    --agribiz-blue-dark: 200 88% 30%;
-    --agribiz-cyan: 190 90% 60%;
-    --agribiz-gray: 210 15% 96%;
-    --agribiz-gray-dark: 210 15% 15%;
+    /* Agribiz Premium Brand Colors */
+    --agribiz-blue: 207 90% 35%;
+    --agribiz-blue-light: 207 90% 45%;
+    --agribiz-blue-dark: 207 90% 25%;
+    --agribiz-cyan: 188 85% 55%;
+    --agribiz-teal: 180 85% 65%;
+    --agribiz-gray: 210 25% 97%;
+    --agribiz-gray-dark: 210 20% 8%;
+    --agribiz-navy: 215 30% 15%;
 
-    /* Gradients */
-    --gradient-primary: linear-gradient(135deg, hsl(var(--agribiz-blue)), hsl(var(--agribiz-blue-light)));
-    --gradient-hero: linear-gradient(135deg, hsl(var(--agribiz-blue)) 0%, hsl(var(--agribiz-cyan)) 100%);
-    --gradient-card: linear-gradient(145deg, hsl(0 0% 100%) 0%, hsl(210 20% 98%) 100%);
+    /* Premium Gradients */
+    --gradient-primary: linear-gradient(135deg, hsl(var(--agribiz-blue)) 0%, hsl(var(--agribiz-cyan)) 100%);
+    --gradient-hero: linear-gradient(135deg, hsl(var(--agribiz-blue)) 0%, hsl(var(--agribiz-teal)) 50%, hsl(var(--agribiz-cyan)) 100%);
+    --gradient-card: linear-gradient(145deg, hsl(0 0% 100%) 0%, hsl(210 25% 99%) 100%);
+    --gradient-feature: linear-gradient(135deg, hsl(var(--agribiz-blue) / 0.05) 0%, hsl(var(--agribiz-cyan) / 0.05) 100%);
+    --gradient-stats: linear-gradient(135deg, hsl(var(--agribiz-blue) / 0.8) 0%, hsl(var(--agribiz-teal) / 0.8) 100%);
 
-    /* Shadows */
-    --shadow-card: 0 4px 6px -1px hsl(var(--agribiz-blue) / 0.1);
-    --shadow-hover: 0 10px 25px -3px hsl(var(--agribiz-blue) / 0.15);
+    /* Premium Shadows */
+    --shadow-card: 0 4px 16px -4px hsl(var(--agribiz-blue) / 0.08);
+    --shadow-hover: 0 12px 32px -8px hsl(var(--agribiz-blue) / 0.15);
     --shadow-focus: 0 0 0 3px hsl(var(--agribiz-blue) / 0.2);
+    --shadow-glow: 0 0 40px hsl(var(--agribiz-cyan) / 0.3);
+    --shadow-elegant: 0 8px 25px -8px hsl(var(--agribiz-blue) / 0.2);
 
-    /* Animations */
-    --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    /* Premium Animations */
+    --transition-smooth: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    --transition-bounce: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
 
     --sidebar-background: 0 0% 98%;
     --sidebar-foreground: 240 5.3% 26.1%;
@@ -154,22 +161,68 @@
 
 @layer components {
   .btn-primary {
-    @apply bg-primary text-primary-foreground hover:bg-primary-dark transition-all duration-300 rounded-lg px-6 py-3 font-medium shadow-sm hover:shadow-md;
+    @apply bg-primary text-primary-foreground hover:bg-primary-dark transition-all duration-300 rounded-xl px-8 py-4 font-semibold shadow-elegant hover:shadow-glow transform hover:-translate-y-0.5;
   }
 
   .btn-secondary {
-    @apply bg-secondary text-secondary-foreground border border-border hover:bg-accent transition-all duration-300 rounded-lg px-6 py-3 font-medium;
+    @apply bg-white/10 text-white border border-white/20 hover:bg-white/20 backdrop-blur-sm transition-all duration-300 rounded-xl px-8 py-4 font-semibold;
+  }
+
+  .btn-glass {
+    @apply bg-white/10 backdrop-blur-lg border border-white/20 text-white hover:bg-white/20 transition-all duration-300 rounded-xl px-6 py-3 font-medium;
   }
 
   .card-gradient {
-    @apply bg-gradient-to-br from-white to-secondary border border-border shadow-card hover:shadow-hover transition-all duration-300;
+    @apply bg-gradient-card border border-border/50 shadow-card hover:shadow-elegant transition-all duration-500 rounded-2xl overflow-hidden;
+  }
+
+  .card-feature {
+    @apply bg-gradient-feature border border-border/30 shadow-card hover:shadow-hover transition-all duration-500 rounded-2xl backdrop-blur-sm;
   }
 
   .hero-gradient {
     background: var(--gradient-hero);
   }
 
+  .stats-gradient {
+    background: var(--gradient-stats);
+  }
+
   .text-gradient {
-    @apply bg-gradient-to-r from-primary to-agribiz-cyan bg-clip-text text-transparent;
+    @apply bg-gradient-to-r from-primary via-agribiz-teal to-agribiz-cyan bg-clip-text text-transparent;
+  }
+
+  .section-glow {
+    position: relative;
+  }
+
+  .section-glow::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(ellipse at center, hsl(var(--agribiz-cyan) / 0.1) 0%, transparent 70%);
+    pointer-events: none;
+  }
+
+  .floating-animation {
+    animation: float 6s ease-in-out infinite;
+  }
+
+  @keyframes float {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-10px); }
+  }
+
+  .pulse-glow {
+    animation: pulse-glow 3s ease-in-out infinite;
+  }
+
+  @keyframes pulse-glow {
+    0%, 100% { box-shadow: var(--shadow-card); }
+    50% { box-shadow: var(--shadow-glow); }
   }
 }
