@@ -85,7 +85,9 @@ export default {
 			backgroundImage: {
 				'gradient-primary': 'var(--gradient-primary)',
 				'gradient-hero': 'var(--gradient-hero)',
-				'gradient-card': 'var(--gradient-card)'
+				'gradient-card': 'var(--gradient-card)',
+				'gradient-feature': 'var(--gradient-feature)',
+				'gradient-stats': 'var(--gradient-stats)'
 			},
 			borderRadius: {
 				lg: 'var(--radius)',
