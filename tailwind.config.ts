@@ -78,7 +78,9 @@ export default {
 			boxShadow: {
 				'card': 'var(--shadow-card)',
 				'hover': 'var(--shadow-hover)',
-				'focus': 'var(--shadow-focus)'
+				'focus': 'var(--shadow-focus)',
+				'elegant': 'var(--shadow-elegant)',
+				'glow': 'var(--shadow-glow)'
 			},
 			backgroundImage: {
 				'gradient-primary': 'var(--gradient-primary)',
